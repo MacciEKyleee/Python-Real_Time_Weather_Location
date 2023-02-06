@@ -32,11 +32,14 @@ else:
     weather_desc = api_data['weather'][0]['description']
     humidity = api_data['main']['humidity']
     wind_speed = api_data['wind']['speed']
+    country = api_data['sys']['country']
 
     print("------------------------------------------------------------------------")
     print('Weather Stats for - {} || {}'.format(location.upper(), current_date_time))
     print("------------------------------------------------------------------------")
 
+    print('City                         :', location)
+    print('Country (abbreviation)       :', country)
     print('Current temperature is       : {:.2f} deg C'.format(city_temperature))
     print('Current weather description  :', weather_desc)
     print('Current humidity is          :', humidity, '%')
